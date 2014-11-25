@@ -1,0 +1,18 @@
+<div class="ng-animate login-ctrl" ng-show="login.show">
+	<form ng-show="login.show">
+		<h2 ng-show="login.error">Error Logging In</h2>
+		<div class="input-wrapper">
+			<label for="username" class="username-label" required>Username</label>
+			<input type="text" name="username" 
+				   ng-model="login.user"
+				   ng-class="{ error: login.error }" />
+		</div>
+		<div class="input-wrapper">
+			<label for="password" class="password-label" required>Password</label>
+			<input type="password" name="password" 
+				   ng-model="login.password"
+				   ng-class="{ error: login.error }" />
+		</div>
+		<button type="submit" ng-click="login.postForm()">Login</button>
+	</form>
+</div>

@@ -1,0 +1,11 @@
+<h1 class="page-title">Deals</h1>
+<div ng-repeat="deal in deals">
+	<h2 class="deal title">{{ deal.title }}</h2>
+	<p class="deal description">{{ deal.description }}</p>
+	<div ng-if="hasPermission(deal, 'edit')">
+		Price: <input type="text" ng-model="deal.price" />
+	</div>
+	<div ng-if="!hasPermission(deal, 'edit')">
+		Price: {{ deal.price|currency }}
+	</div>
+</div>

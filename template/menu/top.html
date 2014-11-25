@@ -1,0 +1,15 @@
+<div class="topmenu">
+	<nav>
+		<ul class="menu">
+			<li class="menu-item">
+		   		<a ui-sref="root">Home</a>
+			</li>
+			<li class="menu-item" ng-repeat="item in top.menu">
+				<a ui-sref="root.choice({ page: item.slug })">
+					{{ item.title }}
+				</a>
+			</li>
+		</ul>
+		<button ng-click="top.logout()">Logout</button>
+	</nav>
+</div>

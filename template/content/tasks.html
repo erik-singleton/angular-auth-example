@@ -1,0 +1,13 @@
+<h1 class="page-title">Tasks</h1>
+<div ng-repeat="task in tasks">
+	<div ng-if="hasPermission(task, 'edit')">
+		<input type="text" class="task title" ng-model="task.title" />
+		<div>
+			<textarea ng-model="task.description"></textarea>
+		</div>
+	</div>
+	<div ng-if="!hasPermission(task, 'edit')">
+		<h2 class="task title">{{ task.title }}</h2>
+		<p class="task description">{{ task.description }}</p>
+	</div>
+</div>

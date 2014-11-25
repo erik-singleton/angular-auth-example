@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="ben">
+<head>
+<title>Hmm dynamic title is tricky without ng-controller</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="topmenu-wrapper">
+	<div ui-view="topmenu"></div>
+</div>
+<div class="bodycontent-wrapper">
+	<div ui-view="bodycontent"></div>
+</div>
+<login-form></login-form>
+<!-- bower:js -->
+<script src="scripts/angular/angular.js"></script>
+<script src="scripts/angular-animate/angular-animate.js"></script>
+<script src="scripts/angular-resource/angular-resource.js"></script>
+<script src="scripts/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="scripts/angular-mocks/angular-mocks.js"></script>
+<!-- endbower -->
+<script src="dist/ben.annotated.js"></script>
+</body>
+</html>
+
